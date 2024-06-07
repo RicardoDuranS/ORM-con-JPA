@@ -1,0 +1,365 @@
+2024-06-06 19:21:46.269806-06:00 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.FileStore.getUnsupportedWriteFormatException(FileStore.java:943)
+	at org.h2.mvstore.FileStore.processCommonHeaderAttributes(FileStore.java:547)
+	at org.h2.mvstore.RandomAccessStore.readStoreHeader(RandomAccessStore.java:227)
+	at org.h2.mvstore.FileStore.start(FileStore.java:916)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:289)
+	... 16 more
+2024-06-06 19:21:46.274896-06:00 database: opening D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db
+org.h2.message.DbException: Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db"
+Unsupported database file version or invalid file header in file "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db" [90048-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:158)
+	at org.h2.mvstore.db.Store.<init>(Store.java:142)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db"
+Unsupported database file version or invalid file header in file "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db" [90048-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 17 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.FileStore.getUnsupportedWriteFormatException(FileStore.java:943)
+	at org.h2.mvstore.FileStore.processCommonHeaderAttributes(FileStore.java:547)
+	at org.h2.mvstore.RandomAccessStore.readStoreHeader(RandomAccessStore.java:227)
+	at org.h2.mvstore.FileStore.start(FileStore.java:916)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:289)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	... 14 more
+2024-06-06 19:22:05.537717-06:00 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.FileStore.getUnsupportedWriteFormatException(FileStore.java:943)
+	at org.h2.mvstore.FileStore.processCommonHeaderAttributes(FileStore.java:547)
+	at org.h2.mvstore.RandomAccessStore.readStoreHeader(RandomAccessStore.java:227)
+	at org.h2.mvstore.FileStore.start(FileStore.java:916)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:289)
+	... 16 more
+2024-06-06 19:22:05.541692-06:00 database: opening D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db
+org.h2.message.DbException: Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db"
+Unsupported database file version or invalid file header in file "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db" [90048-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:158)
+	at org.h2.mvstore.db.Store.<init>(Store.java:142)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db"
+Unsupported database file version or invalid file header in file "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db" [90048-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 17 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.FileStore.getUnsupportedWriteFormatException(FileStore.java:943)
+	at org.h2.mvstore.FileStore.processCommonHeaderAttributes(FileStore.java:547)
+	at org.h2.mvstore.RandomAccessStore.readStoreHeader(RandomAccessStore.java:227)
+	at org.h2.mvstore.FileStore.start(FileStore.java:916)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:289)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	... 14 more
+2024-06-06 19:23:02.218249-06:00 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.FileStore.getUnsupportedWriteFormatException(FileStore.java:943)
+	at org.h2.mvstore.FileStore.processCommonHeaderAttributes(FileStore.java:547)
+	at org.h2.mvstore.RandomAccessStore.readStoreHeader(RandomAccessStore.java:227)
+	at org.h2.mvstore.FileStore.start(FileStore.java:916)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:289)
+	... 16 more
+2024-06-06 19:23:02.221237-06:00 database: opening D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db
+org.h2.message.DbException: Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db"
+Unsupported database file version or invalid file header in file "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db" [90048-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:158)
+	at org.h2.mvstore.db.Store.<init>(Store.java:142)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db"
+Unsupported database file version or invalid file header in file "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db" [90048-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 17 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.FileStore.getUnsupportedWriteFormatException(FileStore.java:943)
+	at org.h2.mvstore.FileStore.processCommonHeaderAttributes(FileStore.java:547)
+	at org.h2.mvstore.RandomAccessStore.readStoreHeader(RandomAccessStore.java:227)
+	at org.h2.mvstore.FileStore.start(FileStore.java:916)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:289)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	... 14 more
+2024-06-06 19:24:57.533384-06:00 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.FileStore.getUnsupportedWriteFormatException(FileStore.java:943)
+	at org.h2.mvstore.FileStore.processCommonHeaderAttributes(FileStore.java:547)
+	at org.h2.mvstore.RandomAccessStore.readStoreHeader(RandomAccessStore.java:227)
+	at org.h2.mvstore.FileStore.start(FileStore.java:916)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:289)
+	... 16 more
+2024-06-06 19:24:57.537063-06:00 database: opening D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db
+org.h2.message.DbException: Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db"
+Unsupported database file version or invalid file header in file "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db" [90048-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:158)
+	at org.h2.mvstore.db.Store.<init>(Store.java:142)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db"
+Unsupported database file version or invalid file header in file "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db" [90048-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 17 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.FileStore.getUnsupportedWriteFormatException(FileStore.java:943)
+	at org.h2.mvstore.FileStore.processCommonHeaderAttributes(FileStore.java:547)
+	at org.h2.mvstore.RandomAccessStore.readStoreHeader(RandomAccessStore.java:227)
+	at org.h2.mvstore.FileStore.start(FileStore.java:916)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:289)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	... 14 more
+2024-06-06 19:25:18.545345-06:00 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.FileStore.getUnsupportedWriteFormatException(FileStore.java:943)
+	at org.h2.mvstore.FileStore.processCommonHeaderAttributes(FileStore.java:547)
+	at org.h2.mvstore.RandomAccessStore.readStoreHeader(RandomAccessStore.java:227)
+	at org.h2.mvstore.FileStore.start(FileStore.java:916)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:289)
+	... 16 more
+2024-06-06 19:25:18.550352-06:00 database: opening D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db
+org.h2.message.DbException: Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db"
+Unsupported database file version or invalid file header in file "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db" [90048-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:158)
+	at org.h2.mvstore.db.Store.<init>(Store.java:142)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db"
+Unsupported database file version or invalid file header in file "D:/Bibliotecas/Documentos/Programación/Proyectos/BackEnd/JPA Hibernate/tienda/db/db.mv.db" [90048-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 17 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.FileStore.getUnsupportedWriteFormatException(FileStore.java:943)
+	at org.h2.mvstore.FileStore.processCommonHeaderAttributes(FileStore.java:547)
+	at org.h2.mvstore.RandomAccessStore.readStoreHeader(RandomAccessStore.java:227)
+	at org.h2.mvstore.FileStore.start(FileStore.java:916)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:289)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	... 14 more
