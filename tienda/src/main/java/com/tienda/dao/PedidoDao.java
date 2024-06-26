@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 import com.tienda.modelo.Pedido;
+import com.tienda.vo.RelatorioDeVenta;
 
 public class PedidoDao {
 
@@ -41,5 +42,21 @@ public class PedidoDao {
     public BigDecimal consultarPrecioPorNombreDePedido(String nombre) {
         String jpql = "SELECT P.precio FROM Pedido AS P WHERE P.nombre=:nombre";
         return em.createQuery(jpql, BigDecimal.class).setParameter("nombre", nombre).getSingleResult();
+    }
+
+    public BigDecimal valorTotalVendido() {
+        String jpql = "SELECT SUM(p.valorTotal) FROM Pedido p";
+        return em.createQuery(jpql, BigDecimal.class).getSingleResult();
+    }
+
+    public List<RelatorioDeVenta> relatorioVentas() {
+        String jpql = "SELECT new package com.tienda.vo.RelatorioDeVenta(producto.nombre, "
+                + "SUM(items.cantidad), "
+                + "MAX(pedido.fecha)) "
+                + "FROM Pedido pedido "
+                + "JOIN pedido.items"
+                + "JOIN item.producto producto"
+                + "ORDER BY item.cantidad DESC";
+        return em.createQuery(jpql, RelatorioDeVenta.class).getResultList();
     }
 }
