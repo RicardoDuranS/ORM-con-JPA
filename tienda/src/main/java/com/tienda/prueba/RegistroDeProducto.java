@@ -25,22 +25,8 @@ public class RegistroDeProducto {
         ProductoDao productoDao = new ProductoDao(em);
         Producto producto = productoDao.consultaPorId(1L);
 
-        ClienteDao clienteDao = new ClienteDao(em);
-        Cliente cliente = new Cliente("Juan", "k6757kjb");
-        Pedido pedido = new Pedido(cliente);
-        pedido.agregarItems(new ItemsPedido(5, producto, pedido));
-
-        PedidoDao pedidoDao = new PedidoDao(em);
-
-        em.getTransaction().begin();
-        clienteDao.guardar(cliente);
-        pedidoDao.guardar(pedido);
-
-        em.getTransaction().commit();
-
-        BigDecimal valort = pedidoDao.valorTotalVendido();
-        System.out.println(valort);
-        em.close();
+        BigDecimal precio = productoDao.consultarPrecioPorNombreDeProducto("Samsung");
+        System.out.println(precio);
     }
 
     private static void registrarProducto() {

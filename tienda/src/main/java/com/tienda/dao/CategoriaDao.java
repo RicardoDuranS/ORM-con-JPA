@@ -24,4 +24,9 @@ public class CategoriaDao {
         categoria = this.em.merge(categoria);// Garantizar que este en el estado Managed
         this.em.remove(categoria);
     }
+
+    public Categoria consultaPorNombre(String nombre) {
+        String jpql = " SELECT C FROM Categoria AS C WHERE C.nombre=:nombre ";
+        return em.createQuery(jpql, Categoria.class).setParameter("nombre", nombre).getSingleResult();
+    }
 }
