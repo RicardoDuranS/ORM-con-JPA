@@ -1,11 +1,18 @@
 package com.tienda.dao;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 
 import com.tienda.modelo.Pedido;
+import com.tienda.modelo.Producto;
 import com.tienda.vo.RelatorioDeVenta;
 
 public class PedidoDao {
