@@ -1,19 +1,13 @@
 package com.tienda.prueba;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 import javax.persistence.EntityManager;
 
 import com.tienda.JPAUtils.JPAUtils;
 import com.tienda.dao.CategoriaDao;
-import com.tienda.dao.ClienteDao;
-import com.tienda.dao.PedidoDao;
 import com.tienda.dao.ProductoDao;
 import com.tienda.modelo.Categoria;
-import com.tienda.modelo.Cliente;
-import com.tienda.modelo.ItemsPedido;
-import com.tienda.modelo.Pedido;
 import com.tienda.modelo.Producto;
 
 public class RegistroDeProducto {
