@@ -84,5 +84,3 @@ This project reinforced the importance of understanding both the basic and advan
 
 This project serves as a solid foundation for anyone looking to master JPA with Hibernate. It covers everything from setting up a basic project to handling complex entity relationships and query optimizations, making it a valuable resource for both beginners and experienced developers.
 
-
-Feel free to customize this draft further to suit your project details.
