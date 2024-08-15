@@ -1,2 +1,2 @@
-# JPA-Hibernate
+# Object-Relational Mapping
  
