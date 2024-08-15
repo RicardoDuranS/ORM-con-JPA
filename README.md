@@ -14,8 +14,7 @@ The motivation behind this project is to provide a hands-on example of how JPA s
 
 - **Introduction to JPA and Hibernate**
   - Overview of JPA and its motivation.
-  - The history and evolution of JPA and Hibernate.
-  - Understanding the problems JPA solves compared to JDBC.
+  - [Understanding the problems JPA solves compared to JDBC](https://oil-cilantro-ad8.notion.site/JPA-vs-JDBC-f45f07a4f24e4a918492896c3e88cf55?pvs=4)
 
 - **Project Configuration**
   - Configuring JPA with Hibernate.
