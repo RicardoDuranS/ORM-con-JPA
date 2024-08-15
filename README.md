@@ -12,34 +12,49 @@ The motivation behind this project is to provide a hands-on example of how JPA s
 
 ### Part 1: Introduction and Basic Setup
 
-- **What is JPA?**  
-  Understand the history and motivation for JPA, its advantages over JDBC, and the problems it solves.
-  
-- **JPA Configuration**  
-  Learn how to download and configure JPA in your project, including the creation and setup of the `persistence.xml` file to establish a database connection.
+- **Introduction to JPA and Hibernate**
+  - Overview of JPA and its motivation.
+  - The history and evolution of JPA and Hibernate.
+  - Understanding the problems JPA solves compared to JDBC.
 
-- **Entity Mapping**  
-  Explore how to map Java objects (entities) to database tables, and understand the basics of entity relationships.
+- **Project Configuration**
+  - Configuring JPA with Hibernate.
+  - Creating and configuring the `persistence.xml` file to establish the database connection.
 
-- **Entity Lifecycle**  
-  Learn the lifecycle of an entity, including how to create, read, update, and delete entities.
+- **Entity Mapping**
+  - Defining entities and mapping them to database tables.
+  - Mapping attributes such as name, description, price, and category.
+  - Implementing simple relationships between products and categories.
 
-- **JPQL Queries**  
-  An introduction to Java Persistence Query Language (JPQL), a powerful tool similar to SQL but designed for JPA.
+- **Entity Lifecycle Management**
+  - Understanding the lifecycle of an entity (create, read, update, delete).
+  - Implementing basic CRUD operations within the application.
 
-### Part 2: Advanced Features
+- **JPQL Queries**
+  - Introduction to Java Persistence Query Language (JPQL).
+  - Writing basic JPQL queries for retrieving, updating, and deleting data.
 
-- **Advanced Entity Models**  
-  Expand on the basic entity models to include more complex relationships like `many-to-many` and bidirectional mappings.
+### Part 2: Advanced Features and Optimization
 
-- **Query Optimization**  
-  Improve application performance by understanding JPA's resource management, using lazy loading and `join fetch` to optimize data retrieval.
+- **Complex Entity Models**
+  - Expanding entity models with `many-to-many` relationships and bidirectional mappings.
+  - Handling more complex relationships between products and categories.
 
-- **Criteria API**  
-  Utilize the Criteria API for building type-safe queries with object-oriented constructs.
+- **Aggregation Functions and Named Queries**
+  - Implementing aggregation functions like sum, average, maximum, and minimum.
+  - Utilizing named queries for better code organization.
 
-- **Inheritance and Composite Keys**  
-  Learn how to implement inheritance among entities and manage composite keys for more complex database designs.
+- **Performance Optimization**
+  - Using lazy loading to optimize entity loading and reduce memory overhead.
+  - Implementing `join fetch` to pre-load related entities efficiently.
+
+- **Criteria API**
+  - Using the Criteria API for building dynamic and type-safe queries.
+  - Implementing parameterized queries for enhanced flexibility.
+
+- **Inheritance and Composite Keys**
+  - Implementing inheritance strategies within entity models.
+  - Managing composite keys for more advanced database schema designs.
 
 ## Technology Stack
 
