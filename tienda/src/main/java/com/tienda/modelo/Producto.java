@@ -8,6 +8,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -15,6 +17,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "productos")
 @NamedQuery(name = "Producto.consultaDePrecio", query = "SELECT P.precio FROM Producto AS P WHERE P.nombre=:nombre")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Producto {
 
     @Id

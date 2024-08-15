@@ -8,6 +8,7 @@ import com.tienda.JPAUtils.JPAUtils;
 import com.tienda.dao.CategoriaDao;
 import com.tienda.dao.ProductoDao;
 import com.tienda.modelo.Categoria;
+import com.tienda.modelo.CategoriaId;
 import com.tienda.modelo.Producto;
 
 public class RegistroDeProducto {
@@ -21,6 +22,8 @@ public class RegistroDeProducto {
 
         BigDecimal precio = productoDao.consultarPrecioPorNombreDeProducto("Samsung");
         System.out.println(precio);
+
+        em.find(Categoria.class, new CategoriaId("Celulares", "456"));
     }
 
     private static void registrarProducto() {
